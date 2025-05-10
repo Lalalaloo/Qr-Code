@@ -1,4 +1,4 @@
-
+/* Base styles (mobile-first) */
 html, body {
   margin: 0;
   padding: 0;
@@ -6,14 +6,12 @@ html, body {
   font-family: 'Outfit', sans-serif;
 }
 
-
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: hsl(212, 45%, 89%);
 }
-
 
 .Qr-holder {
   max-width: 320px;
@@ -26,7 +24,6 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-
 .Qr-holder img {
   width: 100%;
   height: auto;
@@ -34,19 +31,49 @@ body {
   display: block;
 }
 
-
 .Text1 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: hsl(218, 44%, 22%);
   margin: 1rem 0 0.5rem;
 }
 
-
 .Text2 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
   color: hsl(220, 15%, 55%);
   padding: 0 1rem 1rem;
   line-height: 1.4;
+}
+
+
+@media (max-width: 374px) {
+  .Text1 {
+    font-size: 1rem;
+    margin: 0.75rem 0 0.4rem;
+  }
+
+  .Text2 {
+    font-size: 0.85rem;
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .Qr-holder {
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .Qr-holder {
+    max-width: 360px;
+    padding: 1.5rem;
+  }
+
+  .Text1 {
+    font-size: 1.3rem;
+  }
+
+  .Text2 {
+    font-size: 1.05rem;
+  }
 }
